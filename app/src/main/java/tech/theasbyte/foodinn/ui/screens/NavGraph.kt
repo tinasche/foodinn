@@ -2,6 +2,7 @@ package tech.theasbyte.foodinn.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 import androidx.navigation.NavGraph
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -17,23 +18,22 @@ object FoodInnDestinations {
 
 @Composable
 fun NavGraph(
-    modifier: Modifier = Modifier,
-    navController: NavHostController = rememberNavController(),
-    startDestination: String = FoodInnDestinations.HOME_ROUTE
+    navController: NavHostController,
+    modifier: Modifier = Modifier
 ) {
 
-    NavHost(navController = navController, startDestination = startDestination) {
-        composable(FoodInnDestinations.HOME_ROUTE){
-            HomeScreen()
+    NavHost(navController = navController, startDestination = FoodInnDestinations.HOME_ROUTE) {
+        composable(route = FoodInnDestinations.HOME_ROUTE) {
+            HomeScreen(navController = navController)
         }
-        composable(FoodInnDestinations.CART_ROUTE){
-            CartScreen()
+        composable(route = FoodInnDestinations.CART_ROUTE) {
+            CartScreen(navController = navController)
         }
-        composable(FoodInnDestinations.ABOUT_ROUTE){
-            AboutScreen()
+        composable(route = FoodInnDestinations.ABOUT_ROUTE) {
+            AboutScreen(navController = navController)
         }
-        composable(FoodInnDestinations.NOTIFICATIONS_ROUTE){
-            NotificationScreen()
+        composable(route = FoodInnDestinations.NOTIFICATIONS_ROUTE) {
+            NotificationScreen(navController = navController)
         }
     }
 }
