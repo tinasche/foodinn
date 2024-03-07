@@ -10,11 +10,11 @@ import androidx.navigation.compose.rememberNavController
 @Preview
 @Composable
 fun CartScreenPreview() {
-    CartScreen(navController = rememberNavController())
+    CartScreen()
 }
 
 @Composable
-fun CartScreen(modifier: Modifier = Modifier, navController: NavHostController) {
+fun CartScreen(modifier: Modifier = Modifier) {
     Text(text = "Cart Screen")
 
 }

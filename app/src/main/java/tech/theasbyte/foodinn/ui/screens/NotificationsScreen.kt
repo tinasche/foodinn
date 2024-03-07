@@ -10,10 +10,10 @@ import androidx.navigation.compose.rememberNavController
 @Preview
 @Composable
 fun NotificationScreenPreview() {
-    NotificationScreen(navController = rememberNavController())
+    NotificationScreen()
 }
 
 @Composable
-fun NotificationScreen(modifier: Modifier = Modifier, navController: NavHostController) {
+fun NotificationScreen(modifier: Modifier = Modifier) {
     Text(text = "Notification Screen")
 }

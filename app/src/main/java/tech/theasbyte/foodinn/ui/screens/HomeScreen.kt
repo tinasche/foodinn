@@ -10,11 +10,11 @@ import androidx.navigation.compose.rememberNavController
 @Preview
 @Composable
 fun HomeScreenPreview() {
-    HomeScreen(navController = rememberNavController())
+    HomeScreen()
 }
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier, navController: NavHostController) {
+fun HomeScreen(modifier: Modifier = Modifier) {
     Text(text = "Home Screen")
 
 }

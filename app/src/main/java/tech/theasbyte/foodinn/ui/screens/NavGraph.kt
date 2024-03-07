@@ -24,16 +24,16 @@ fun NavGraph(
 
     NavHost(navController = navController, startDestination = FoodInnDestinations.HOME_ROUTE) {
         composable(route = FoodInnDestinations.HOME_ROUTE) {
-            HomeScreen(navController = navController)
+            HomeScreen()
         }
         composable(route = FoodInnDestinations.CART_ROUTE) {
-            CartScreen(navController = navController)
+            CartScreen()
         }
         composable(route = FoodInnDestinations.ABOUT_ROUTE) {
-            AboutScreen(navController = navController)
+            AboutScreen()
         }
         composable(route = FoodInnDestinations.NOTIFICATIONS_ROUTE) {
-            NotificationScreen(navController = navController)
+            NotificationScreen()
         }
     }
 }
